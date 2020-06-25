@@ -4,4 +4,5 @@ jdk:
 
 install: skip
 script:
-  - ./mvnw clean install
+  - ./mvnw clean compile
+  - ./mvnw verify
