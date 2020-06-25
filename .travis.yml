@@ -3,5 +3,9 @@ jdk:
   - openjdk11
 
 install: skip
-script:
-  - ./mvnw clean install
+jobs:
+  include:
+    - stage: compile
+      script: ./mvnw compile
+    - stage: test
+      script: ./mvnw test
